@@ -58,6 +58,15 @@ body {
   background-color: #428bca;
 }
 
+.nav-sidebar > li > a:hover {
+color:#fff;
+background:#515659;
+}
+
+.nav-sidebar > li > a:focus {
+color:#fff;
+background:#515659;
+}
 
 /*
  * Main content
