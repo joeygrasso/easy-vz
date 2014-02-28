@@ -2,17 +2,6 @@
 
 class Site extends CI_Controller {
 
-	/**
-	 * Index Page for this controller.
-	 *
-	 * Maps to the following URL
-	 * 		http://example.com/index.php/site
-	 *	- or -  
-	 * 		http://example.com/index.php/site/index
-	 *	- or -
-	 * Since this controller is set as the default controller in 
-	 * config/routes.php, it's displayed at http://example.com/
-	 */
 	public function index()
 	{
 		$this->load->view('site_header');
@@ -39,14 +28,28 @@ class Site extends CI_Controller {
 	public function login_validation(){
 		$this->load->library('form_validation');
 		
-		$this->form_validation->set_rules('username', 'User Name', 'required');
-		$this->form_validation->set_rules('password', 'Password', 'required|md5');
+		$this->form_validation->set_rules('username', 'User Name', 'required|xss_clean|callback_validate_credentials');
+		$this->form_validation->set_rules('password', 'Password', 'required|md5|trim');
 		
 		if($this->form_validation->run()){
 			redirect('site/dashboard');
 		} else {
-			$this->load->view('login');
+			$this->load->signin();
 		}
+		
+		
+		
+	}
+	
+	public function validate_credentials(){
+			$this->load->model('model_users');
+			
+			if($this->model_users0>can_log_in()){
+				return true;
+			} else {
+				$this->form_validation->set_message('validate_credentials', 'Incorrect User Name/Password');
+				return false;
+			}
 	}
 }
 
