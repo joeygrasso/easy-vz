@@ -43,6 +43,7 @@ class Site extends CI_Controller {
 			$data = array(
 				'username' => $this->input->post('username'),
 				'is_logged_in' => 1);
+			$this->session->set_userdata($data);
 			redirect('site/dashboard');
 		} else {
 			$this->load->view('site_header');
@@ -55,7 +56,6 @@ class Site extends CI_Controller {
 			$this->load->model('model_users');
 			
 			if($this->model_users->can_log_in()){
-				$this->session->set_userdata($data);
 				return true;
 			} else {
 				$this->form_validation->set_message('validate_credentials', 'Incorrect User Name/Password');
