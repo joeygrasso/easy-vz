@@ -13,7 +13,7 @@
 		$this->load->helper('form');
       
 		$attributes = array('class' => 'form=signin', 'role' => 'form');
-		echo form_open(site/login_validation, $attributes);
+		echo form_open('site/login_validation', $attributes);
 			
 			echo validation_errors();
 			
@@ -24,7 +24,8 @@
 			echo form_password($data);
 			
 			$data = array('name'=> 'remember','id'=> 'remember','value'=> 'remember-me','style'=>'float:none');
-			echo form_radio($data);
+			echo form_checkbox($data);
+			echo form_label('Remember Me', 'remember');
 			
 			$data = array('class'=>'btn btn-lg btn-primary btn-block','value'=>'Sign In','type'=>'submit','content'=>'Sign In');
 			echo form_button($data);
