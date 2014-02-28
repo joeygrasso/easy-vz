@@ -40,7 +40,7 @@
             <li><a href="#">Remove Guest</a></li>
             <li>&nbsp;</li>
             <li><a href="#">Refresh</a></li>
-			<li><a href="test_home.html">Log Out</a></li>
+			<li><a href="<?php echo base_url().'site/signout'; ?>">Sign Out</a></li>
           </ul>
         </div>
         <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
