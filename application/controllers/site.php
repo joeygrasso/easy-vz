@@ -33,7 +33,7 @@ class Site extends CI_Controller {
 	}
 	
 	public function dashboard(){
-		echo "It WORKED!";
+		$this->load->view('dashboard_view');
 	}
 	
 	public function login_validation(){
