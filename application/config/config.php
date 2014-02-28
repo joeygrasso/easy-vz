@@ -14,7 +14,7 @@
 | path to your installation.
 |
 */
-$config['base_url']	= 'http://cpunation.com/virtualization/';
+$config['base_url']	= 'http://openvz.cpunation.lan/virtualization/';
 
 /*
 |--------------------------------------------------------------------------

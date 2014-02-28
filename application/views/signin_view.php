@@ -13,7 +13,7 @@
 		$this->load->helper('form');
       
 		$attributes = array('class' => 'form=signin', 'role' => 'form');
-		echo form_open(site/login_validation, $attributes)
+		echo form_open(site/login_validation, $attributes);
 			
 			echo validation_errors();
 			
