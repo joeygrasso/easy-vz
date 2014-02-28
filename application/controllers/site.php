@@ -31,6 +31,23 @@ class Site extends CI_Controller {
 		$this->load->view('signin_view');
 		$this->load->view('site_footer');
 	}
+	
+	public function dashboard(){
+		echo "It WORKED!";
+	}
+	
+	public function login_validation(){
+		$this->load->library('form_validation');
+		
+		$this->form_validation->set_rules('username', 'User Name', 'required');
+		$this->form_validation->set_rules('password', 'Password', 'required|md5');
+		
+		if($this->form_validation->run()){
+			redirect('site/dashboard');
+		} else {
+			$this->load->view('login');
+		}
+	}
 }
 
 /* End of file site.php */
