@@ -22,13 +22,14 @@
 		$remaining = 100 - (int)$usePercent;
 		        
         echo '
-				<span class="text-muted"><text style="font-size: 1.75em">Size: '.$elements[3].'<br />Used: '.$elements[5].'<br />Available: '.$elements[8].'
-				<div id="progressbar" style="border: 2px solid;"><span style="position:absolute; margin-left:15%; margin-top:6px">'.$usePercent.'% Used</span></div>
+				<span class="text-muted"><text style="font-size: 1.75em;">
+				<div id="progressbar" style="border: 2px solid;"><span style="position:absolute; margin-left:32%; margin-top:6px">'.$usePercent.'% Used</span></div>
 				<script>
 					$( "#progressbar" ).progressbar({
 					value: '.$usePercent.'
 					});
 				</script>
+				Size: '.$elements[3].'B Used: '.$elements[5].'B Available: '.$elements[8].'B
 				</text>
 				</span>
 			 ';

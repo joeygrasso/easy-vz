@@ -18,7 +18,7 @@
     <link href="<?php echo base_url(); ?>includes/css/dashboard.css" rel="stylesheet">
     
     <!-- Progress Bar Stuff -->
-    <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.4/themes/smoothness/jquery-ui.css">
+    <link rel="stylesheet" href="<?php echo base_url(); ?>includes/css/progressBar.css">
 	<script src="http://code.jquery.com/jquery-1.10.2.js"></script>
 	<script src="http://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
 
@@ -44,7 +44,7 @@
             <li><a href="#">Modify Guest</a></li>
             <li><a href="#">Remove Guest</a></li>
             <li>&nbsp;</li>
-            <li><a href="#">Refresh</a></li>
+            <li><a href="javascript:document.location.reload();">Refresh</a></li>
 			<li><a href="<?php echo base_url().'site/signout'; ?>">Sign Out</a></li>
           </ul>
         </div>
@@ -54,19 +54,18 @@
 		  <h3 class="sub-header">Host Status</h3>
           <div class="row placeholders">
             <div class="col-xs-6 col-sm-4 placeholder">
-              <h4>Available Hard Drive Space</h4>
-              <!--<span class="text-muted"><text style="font-size: 1.75em">25 GB</text></span> -->
+              <h4>Hard Drive Status</h4>
               <?php 
 				$this->load->helper('HdStatus');
 				getHdStatus();
               ?>
             </div>
             <div class="col-xs-6 col-sm-4 placeholder">
-              <h4>Available System Memory</h4>
+              <h4>System Memory Status</h4>
               <span class="text-muted"><text style="font-size: 1.75em">8 GB </text></span>
             </div>
             <div class="col-xs-6 col-sm-4 placeholder">
-              <h4>CPU Usage</h4>
+              <h4>CPU Usage Status</h4>
               <span class="text-muted"><text style="font-size: 1.75em">23%</text></span>
             </div>
           </div>
