@@ -6,8 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
-	<!-- Favicon Shit -->
-    <link rel="shortcut icon" href="../../assets/ico/favicon.ico">
+	<!-- Favicon Shit
+    <link rel="shortcut icon" href="../../assets/ico/favicon.ico">  -->
 
     <title>Virtualization Dashboard</title>
 
@@ -16,6 +16,11 @@
 
     <!-- Custom styles for this template -->
     <link href="<?php echo base_url(); ?>includes/css/dashboard.css" rel="stylesheet">
+    
+    <!-- Progress Bar Stuff -->
+    <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.4/themes/smoothness/jquery-ui.css">
+	<script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+	<script src="http://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
 
     <!-- Just for debugging purposes. Don't actually copy this line! -->
     <!--[if lt IE 9]><script src="./includes/js/ie8-responsive-file-warning.js"></script><![endif]-->
@@ -50,7 +55,11 @@
           <div class="row placeholders">
             <div class="col-xs-6 col-sm-4 placeholder">
               <h4>Available Hard Drive Space</h4>
-              <span class="text-muted"><text style="font-size: 1.75em">25 GB</text></span>
+              <!--<span class="text-muted"><text style="font-size: 1.75em">25 GB</text></span> -->
+              <?php 
+				$this->load->helper('HdStatus');
+				getHdStatus();
+              ?>
             </div>
             <div class="col-xs-6 col-sm-4 placeholder">
               <h4>Available System Memory</h4>
