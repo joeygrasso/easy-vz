@@ -2,12 +2,12 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
-	<!-- Favicon Shit
-    <link rel="shortcut icon" href="../../assets/ico/favicon.ico">  -->
+	
+    <link rel="shortcut icon" href="<?php echo base_url(); ?>images/favicon.ico" type="image/x-icon">
+	<link rel="icon" href="<?php echo base_url(); ?>images/favicon.ico" type="image/x-icon">
 
     <title>Virtualization Dashboard</title>
 
@@ -22,9 +22,6 @@
 	<script src="http://code.jquery.com/jquery-1.10.2.js"></script>
 	<script src="http://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
 
-    <!-- Just for debugging purposes. Don't actually copy this line! -->
-    <!--[if lt IE 9]><script src="./includes/js/ie8-responsive-file-warning.js"></script><![endif]-->
-
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
@@ -37,9 +34,10 @@
       <div class="row">
         <div class="col-sm-3 col-md-2 sidebar">
           <ul class="nav nav-sidebar">
-            <li class="active"><a href="#">Overview</a></li>
+            <li class="active"><a href="<?php echo base_url(); ?>index.php/site/dashboard">Overview</a></li>
             <li><a href="#">Start Guest</a></li>
             <li><a href="#">Stop Guest</a></li>
+            <li><a href="#">Restart Guest</a></li>
             <li><a href="#">Create Guest</a></li>
             <li><a href="#">Modify Guest</a></li>
             <li><a href="#">Remove Guest</a></li>

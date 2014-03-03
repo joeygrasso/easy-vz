@@ -13,10 +13,10 @@
                 $elements = explode(" ",$output);
         }
 
-                $total = $elements[134] + 1;
+                $total = $elements[138] + 1;
                 $used = $elements[59];
                 $remaining = $total - $used;
-                $percent  = round(($used / $total) * 100)i;
+                $percent  = round(($used / $total) * 100);
 		        
         echo '
 				<span class="text-muted"><text style="font-size: 1.75em;">

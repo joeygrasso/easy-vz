@@ -16,14 +16,15 @@
 		$user = $elements[45];
 		$system = $elements[53];
 		$idle = $elements[76];
+		$inUse = $user + $system;
 		
 		
 		echo '
 				<span class="text-muted"><text style="font-size: 1.75em;">
-				<div id="cpubar" style="border: 2px solid;"><span style="position:absolute; margin-left:32%; margin-top:6px">'.$idle.'% Idle</span></div>
+				<div id="cpubar" style="border: 2px solid;"><span style="position:absolute; margin-left:32%; margin-top:6px">'.$inUse.'% Idle</span></div>
 				<script>
 					$( "#cpubar" ).progressbar({
-					value: '.$idle.'
+					value: '.$inUse.'
 					});
 				</script>
 				User: '.$user.'% System: '.$system.'% Idle: '.$idle.'%
