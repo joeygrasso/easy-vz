@@ -11,10 +11,10 @@
 -->
       <?php
 		$this->load->helper('form');
-      
-		$attributes = array('class' => 'form=signin', 'role' => 'form');
+
+		$attributes = array('class' => 'form-signin', 'role' => 'form');
 		echo form_open('site/login_validation', $attributes);
-			
+			echo "<h2 class=\"form-signin-heading\">Please Sign In</h2>";
 			echo validation_errors();
 			
 			$data = array('name'=>'username','id'=> 'username','value'=> 'User Name','class'=>'form-control');
