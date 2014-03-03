@@ -62,11 +62,17 @@
             </div>
             <div class="col-xs-6 col-sm-4 placeholder">
               <h4>System Memory Status</h4>
-              <span class="text-muted"><text style="font-size: 1.75em">8 GB </text></span>
+              <?php
+				$this->load->helper('ramstatus');
+				getRamStatus();
+			  ?>
             </div>
             <div class="col-xs-6 col-sm-4 placeholder">
               <h4>CPU Usage Status</h4>
-              <span class="text-muted"><text style="font-size: 1.75em">23%</text></span>
+               <?php
+				$this->load->helper('cpustatus');
+				getCpuStatus();
+			  ?>
             </div>
           </div>
 
