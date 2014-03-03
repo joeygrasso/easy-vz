@@ -13,7 +13,9 @@
                 $elements = explode(" ",$output);
         }
 
-                $total = $elements[138] + 1;
+				// The array length can change base on how much memory is in use. The amount of RAM available is always the last element. 
+				// so you get the count of all the elements and subtract one to get the right value.
+                $total = $elements[count($elements)-1] + 1;
                 $used = $elements[59];
                 $remaining = $total - $used;
                 $percent  = round(($used / $total) * 100);
