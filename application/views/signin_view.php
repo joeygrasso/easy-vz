@@ -17,10 +17,10 @@
 			echo "<h2 class=\"form-signin-heading\">Please Sign In</h2>";
 			echo validation_errors();
 			
-			$data = array('name'=>'username','id'=> 'username','value'=> 'User Name','class'=>'form-control');
+			$data = array('name'=>'username','id'=> 'username','placeholder'=> 'User Name','class'=>'form-control');
 			echo form_input($data);
 			
-			$data = array('name'=>'password','id'=> 'password','value'=> 'password','class'=>'form-control','type'=>'password');
+			$data = array('name'=>'password','id'=> 'password','placeholder'=> 'password','class'=>'form-control','type'=>'password');
 			echo form_password($data);
 			
 			$data = array('name'=> 'remember','id'=> 'remember','value'=> 'remember-me','style'=>'float:none');
