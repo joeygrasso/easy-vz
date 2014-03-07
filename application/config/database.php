@@ -49,9 +49,9 @@ $active_group = 'default';
 $active_record = TRUE;
 
 $db['default']['hostname'] = 'localhost';
-$db['default']['username'] = 'root';
-$db['default']['password'] = 'aquarius';
-$db['default']['database'] = 'virtualization';
+$db['default']['username'] = 'DBuser';
+$db['default']['password'] = 'DBpass';
+$db['default']['database'] = 'DBname';
 $db['default']['dbdriver'] = 'mysql';
 $db['default']['dbprefix'] = '';
 $db['default']['pconnect'] = TRUE;
