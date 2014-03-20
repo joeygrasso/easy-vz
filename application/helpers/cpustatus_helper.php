@@ -1,4 +1,6 @@
 <?php
+	// This helper will crash unless 'sysstat' is installed on the machine.
+	// sudo yum/apt-get install sysstat
 	
 	function getCpuStatus(){
 		

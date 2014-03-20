@@ -17,8 +17,15 @@
         }
 		
 		// Get Percentage Remaining For Progress Bar
-		$rawPercent = $elements[10];
-		$usePercent = substr($rawPercent, 0, 2);
+		// May need to change $elements[x] to match new array
+		$rawPercent = $elements[11];
+		// If-else to make sure the % sign is not included.
+		if(strlen($rawPercent) == 2){
+			$usePercent = substr($rawPercent, 0, 1);
+		} else {
+			$usePercent = substr($rawPercent, 0, 2);
+		}
+		
 		$remaining = 100 - (int)$usePercent;
 		        
         echo '
