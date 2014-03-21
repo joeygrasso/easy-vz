@@ -9,7 +9,6 @@
 				$query = $this->db->get('users');
 				
 				if($query->num_rows() == 1){
-					
 					return true;
 				} else {
 					return false;
