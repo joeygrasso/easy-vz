@@ -27,7 +27,14 @@ class Site extends CI_Controller {
 	// Dashboard View
 	public function dashboard(){
 		if($this->session->userdata('is_logged_in')){
-			$this->load->view('dashboard_view');
+			// Get container db table data to display on page.
+			$this->load->model('model_containers');
+			$arr['data'] = $this->model_containers->get_container_data();
+			
+			// 'msg' added to get rid of error for form handling messages.
+			$arr['msg'] = "";
+
+			$this->load->view('dashboard_view', $arr);
 		} else {
 			redirect('site/signin');
 		}
