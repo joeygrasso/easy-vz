@@ -42,7 +42,7 @@
             <li><a href="#" data-toggle="modal" data-target="#modifyModal">Modify Guest</a></li>
             <li><a href="#" data-toggle="modal" data-target="#removeModal">Remove Guest</a></li>
             <li>&nbsp;</li>
-            <li><a href="javascript:document.location.reload();">Refresh</a></li>
+            <li><a href="<?php echo base_url(); ?>index.php/site/dashboard">Refresh</a></li>
             <li><a href="<?php echo base_url();?>index.php/site/signout">Sign Out</a></li>
           </ul>
         </div>

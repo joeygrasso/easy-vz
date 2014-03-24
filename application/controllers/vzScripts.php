@@ -50,8 +50,16 @@ class vzScripts extends CI_Controller {
 
 			if ($this->input->post('status') == "Restart"){
 				$arr['msg'] = '<script> alert("The container is being restarted.")</script>';
-			} else {
-				$arr['msg'] = '<script> alert("Container Status Changed")</script>';
+				$this->load->helper('commands');
+                restart($this->input->post('cid'));
+			} else if ($this->input->post('status') == "Start"){
+				$arr['msg'] = '<script> alert("The container is being started.")</script>';
+				$this->load->helper('commands');
+                start($this->input->post('cid'));
+			} else{
+				$arr['msg'] = '<script> alert("The container is being stopped.")</script>';
+				$this->load->helper('commands');
+                start($this->input->post('cid'));
 			}
 
 			$this->load->view('dashboard_view', $arr);
