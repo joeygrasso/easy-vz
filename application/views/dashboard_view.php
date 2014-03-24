@@ -43,7 +43,7 @@
             <li><a href="#" data-toggle="modal" data-target="#removeModal">Remove Guest</a></li>
             <li>&nbsp;</li>
             <li><a href="javascript:document.location.reload();">Refresh</a></li>
-            <li><a href="<?php echo base_url().'site/signout'; ?>">Sign Out</a></li>
+            <li><a href="<?php echo base_url();?>index.php/site/signout">Sign Out</a></li>
           </ul>
         </div>
         <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
@@ -274,80 +274,56 @@
               </div>
             <?php  $this->load->helper('form'); $hidden = array('status' => 'Stopped');echo form_open('vzScripts/create_container','',$hidden); ?>
         <div class="modal-body">
-                  <p>Please fill out all of the following fields to create a new container:</p>
-                  <?php echo validation_errors(); ?>
-          <div class="form-group">
-          <?php echo form_label('ContainerID', 'cid');
-          $data = array(
-                    'name'        => 'cid',
-                    'id'          => 'cid',
-                    'class'       => 'form-control',
-                    'placeholder' => 'CID',
-                    'maxlength'   => '4',
-                    'size'        => '50',
-                );
-          echo form_input($data); ?>
-        </div>
-        <div class="form-group">
-          <?php echo form_label('Hostname', 'hostname');
-          $data = array(
-                    'name'        => 'hostname',
-                    'id'          => 'hostname',
-                    'class'       => 'form-control',
-                    'placeholder' => 'Hostname',
-                    'maxlength'   => '50',
-                    'size'        => '50',
-                );
-          echo form_input($data); ?>
-        </div>
-        <div class="form-group">
-          <?php echo form_label('Operating System', 'operatingsystem');
-          $data = array(
-                    'name'        => 'operatingsystem',
-                    'id'          => 'operatingsystem',
-                    'class'       => 'form-control',
-                    'placeholder' => 'Operating System',
-                    'maxlength'   => '50',
-                    'size'        => '50',
-                );
-          echo form_input($data); ?>
+          <p>Please fill out all of the following fields to create a new container:</p>
+          <?php echo validation_errors(); ?>
+            <div class="form-group">
+              <?php echo form_label('Hostname', 'hostname');
+              $data = array(
+                        'name'        => 'hostname',
+                        'id'          => 'hostname',
+                        'class'       => 'form-control',
+                        'placeholder' => 'Hostname',
+                        'maxlength'   => '50',
+                        'size'        => '50',
+                    );
+              echo form_input($data); ?>
+            </div>
+            <div class="form-group">
+              <?php echo form_label('Operating System', 'operatingsystem');
+              $data = array(
+                        'name'        => 'operatingsystem',
+                        'id'          => 'operatingsystem',
+                        'class'       => 'form-control',
+                        'placeholder' => 'Operating System',
+                        'maxlength'   => '50',
+                        'size'        => '50',
+                    );
+              echo form_input($data); ?>
+            </div>
+            <div class="form-group">
+              <?php echo form_label('RAM', 'ram');
+              $data = array(
+                        'name'        => 'ram',
+                        'id'          => 'ram',
+                        'class'       => 'form-control',
+                        'placeholder' => 'RAM Allocation',
+                        'maxlength'   => '50',
+                        'size'        => '50',
+                    );
+              echo form_input($data); ?>
+            </div>
+            <div class="form-group">
+              <?php echo form_label('Hard Drive', 'harddrive');
+              $data = array(
+                        'name'        => 'harddrive',
+                        'id'          => 'harddrive',
+                        'class'       => 'form-control',
+                        'placeholder' => 'Hard Drive Space',
+                        'maxlength'   => '50',
+                        'size'        => '50',
+                    );
+              echo form_input($data); ?>
           </div>
-          <div class="form-group">
-          <?php echo form_label('IP Address', 'ipaddress');
-          $data = array(
-                    'name'        => 'ipaddress',
-                    'id'          => 'ipaddress',
-                    'class'       => 'form-control',
-                    'placeholder' => 'IP Address',
-                    'maxlength'   => '50',
-                    'size'        => '50',
-                );
-          echo form_input($data); ?>
-        </div>
-        <div class="form-group">
-          <?php echo form_label('RAM', 'ram');
-          $data = array(
-                    'name'        => 'ram',
-                    'id'          => 'ram',
-                    'class'       => 'form-control',
-                    'placeholder' => 'RAM Allocation',
-                    'maxlength'   => '50',
-                    'size'        => '50',
-                );
-          echo form_input($data); ?>
-        </div>
-        <div class="form-group">
-          <?php echo form_label('Hard Drive', 'harddrive');
-          $data = array(
-                    'name'        => 'harddrive',
-                    'id'          => 'harddrive',
-                    'class'       => 'form-control',
-                    'placeholder' => 'Hard Drive Space',
-                    'maxlength'   => '50',
-                    'size'        => '50',
-                );
-          echo form_input($data); ?>
-        </div>
         </div>
         <div class="modal-footer">
           <?php $data = array(
@@ -384,80 +360,68 @@
               </div>
             <?php  $this->load->helper('form'); $hidden = array('status' => 'Stopped');echo form_open('vzScripts/modify_container','',$hidden); ?>
         <div class="modal-body">
-                  <p>Please enter the CID for the corresponding container you want to modify. Fill out all of the fields that you want to modify. Fields left blank will not be modified. Only the CID is required, and it must exist for any modifications to be made.</p>
-                  <?php echo validation_errors(); ?>
+          <p>Please enter the CID for the corresponding container you want to modify. Fill out all of the fields that you want to modify. Fields left blank will not be modified. Only the CID is required, and it must exist for any modifications to be made.</p>
+          <?php echo validation_errors(); ?>
           <div class="form-group">
-          <?php echo form_label('ContainerID', 'cid');
-          $data = array(
-                    'name'        => 'cid',
-                    'id'          => 'cid',
-                    'class'       => 'form-control',
-                    'placeholder' => 'CID',
-                    'maxlength'   => '4',
-                    'size'        => '50',
-                );
-          echo form_input($data); ?>
-        </div>
-        <div class="form-group">
-          <?php echo form_label('Hostname', 'hostname');
-          $data = array(
-                    'name'        => 'hostname',
-                    'id'          => 'hostname',
-                    'class'       => 'form-control',
-                    'placeholder' => 'Hostname',
-                    'maxlength'   => '50',
-                    'size'        => '50',
-                );
-          echo form_input($data); ?>
-        </div>
-        <div class="form-group">
-          <?php echo form_label('Operating System', 'operatingsystem');
-          $data = array(
-                    'name'        => 'operatingsystem',
-                    'id'          => 'operatingsystem',
-                    'class'       => 'form-control',
-                    'placeholder' => 'Operating System',
-                    'maxlength'   => '50',
-                    'size'        => '50',
-                );
-          echo form_input($data); ?>
+            <?php echo form_label('ContainerID', 'cid');
+            $data = array(
+                      'name'        => 'cid',
+                      'id'          => 'cid',
+                      'class'       => 'form-control',
+                      'placeholder' => 'CID',
+                      'maxlength'   => '4',
+                      'size'        => '50',
+                  );
+            echo form_input($data); ?>
           </div>
           <div class="form-group">
-          <?php echo form_label('IP Address', 'ipaddress');
-          $data = array(
-                    'name'        => 'ipaddress',
-                    'id'          => 'ipaddress',
-                    'class'       => 'form-control',
-                    'placeholder' => 'IP Address',
-                    'maxlength'   => '50',
-                    'size'        => '50',
-                );
-          echo form_input($data); ?>
-        </div>
-        <div class="form-group">
-          <?php echo form_label('RAM', 'ram');
-          $data = array(
-                    'name'        => 'ram',
-                    'id'          => 'ram',
-                    'class'       => 'form-control',
-                    'placeholder' => 'RAM Allocation',
-                    'maxlength'   => '50',
-                    'size'        => '50',
-                );
-          echo form_input($data); ?>
-        </div>
-        <div class="form-group">
-          <?php echo form_label('Hard Drive', 'harddrive');
-          $data = array(
-                    'name'        => 'harddrive',
-                    'id'          => 'harddrive',
-                    'class'       => 'form-control',
-                    'placeholder' => 'Hard Drive Space',
-                    'maxlength'   => '50',
-                    'size'        => '50',
-                );
-          echo form_input($data); ?>
-        </div>
+          <?php echo form_label('Hostname', 'hostname');
+            $data = array(
+                      'name'        => 'hostname',
+                      'id'          => 'hostname',
+                      'class'       => 'form-control',
+                      'placeholder' => 'Hostname',
+                      'maxlength'   => '50',
+                      'size'        => '50',
+                  );
+            echo form_input($data); ?>
+          </div>
+          <div class="form-group">
+            <?php echo form_label('Operating System', 'operatingsystem');
+            $data = array(
+                      'name'        => 'operatingsystem',
+                      'id'          => 'operatingsystem',
+                      'class'       => 'form-control',
+                      'placeholder' => 'Operating System',
+                      'maxlength'   => '50',
+                      'size'        => '50',
+                  );
+            echo form_input($data); ?>
+            </div>
+          <div class="form-group">
+            <?php echo form_label('RAM', 'ram');
+            $data = array(
+                      'name'        => 'ram',
+                      'id'          => 'ram',
+                      'class'       => 'form-control',
+                      'placeholder' => 'RAM Allocation',
+                      'maxlength'   => '50',
+                      'size'        => '50',
+                  );
+            echo form_input($data); ?>
+          </div>
+          <div class="form-group">
+            <?php echo form_label('Hard Drive', 'harddrive');
+            $data = array(
+                      'name'        => 'harddrive',
+                      'id'          => 'harddrive',
+                      'class'       => 'form-control',
+                      'placeholder' => 'Hard Drive Space',
+                      'maxlength'   => '50',
+                      'size'        => '50',
+                  );
+            echo form_input($data); ?>
+          </div>
         </div>
         <div class="modal-footer">
           <?php $data = array(
@@ -491,49 +455,48 @@
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
                 <h4 class="modal-title">Remove A OpenVZ Container</h4>
-              </div>
+            </div>
             <?php  $this->load->helper('form'); echo form_open('vzScripts/remove_container'); ?>
-        <div class="modal-body">
-                  <p>Please enter the CID of the appropriate container you wish to remove:</p>
-                  <?php echo validation_errors(); ?>
-          <div class="form-group">
-         <?php echo form_label('ContainerID', 'cid');
-          $data = array(
-                    'name'        => 'cid',
-                    'id'          => 'cid',
-                    'class'       => 'form-control',
-                    'placeholder' => 'CID',
-                    'maxlength'   => '4',
-                    'size'        => '50',
+            <div class="modal-body">
+              <p>Please enter the CID of the appropriate container you wish to remove:</p>
+              <?php echo validation_errors(); ?>
+              <div class="form-group">
+                <?php echo form_label('ContainerID', 'cid');
+                $data = array(
+                          'name'        => 'cid',
+                          'id'          => 'cid',
+                          'class'       => 'form-control',
+                          'placeholder' => 'CID',
+                          'maxlength'   => '4',
+                          'size'        => '50',
+                      );
+                echo form_input($data); ?>
+                </div>
+              </div>
+              <div class="modal-footer">
+                <?php $data = array(
+                    'name' => 'cancel',
+                    'id' => 'cancel_button',
+                    'class' => 'btn btn-default',
+                    'type' => 'button',
+                    'data-dismiss' => 'modal',
+                    'content' => 'Cancel'
                 );
-          echo form_input($data); ?>
+                echo form_button($data);
+                $data = array(
+                  'name' => 'start',
+                    'id' => 'start',
+                    'class' => 'btn btn-primary',
+                    'type' => 'submit',
+                    'content' => 'Remove'
+                );
+                echo form_button($data); ?>
+              </div>
+              <?php echo form_close(); ?>
+            </div>
           </div>
         </div>
-        <div class="modal-footer">
-          <?php $data = array(
-              'name' => 'cancel',
-              'id' => 'cancel_button',
-              'class' => 'btn btn-default',
-              'type' => 'button',
-              'data-dismiss' => 'modal',
-              'content' => 'Cancel'
-          );
-          echo form_button($data);
-          $data = array(
-            'name' => 'start',
-              'id' => 'start',
-              'class' => 'btn btn-primary',
-              'type' => 'submit',
-              'content' => 'Remove'
-          );
-          echo form_button($data); ?>
-        </div>
-        <?php echo form_close(); ?>
-      </div>
-    </div>
-  </div>
-  <!-- End Remove Modal -->
-
+        <!-- End Remove Modal -->
     <!-- Bootstrap core JavaScript -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
     <script src="<?php echo base_url(); ?>includes/js/bootstrap.min.js"></script>

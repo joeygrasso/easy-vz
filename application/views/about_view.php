@@ -5,34 +5,47 @@
 				<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
 				<li data-target="#myCarousel" data-slide-to="1"></li>
 				<li data-target="#myCarousel" data-slide-to="2"></li>
+				<li data-target="#myCarousel" data-slide-to="3"></li>
+				<li data-target="#myCarousel" data-slide-to="4"></li>
 			</ol>
 			<div class="carousel-inner">
 				<div class="item active">
 					<div class="container">
 						<div class="carousel-caption">
-							<h1>Example headline.</h1>
-							<p>Note: If you're viewing this page via a <code>file://</code> URL, the "next" and "previous" Glyphicon buttons on the left and right might not load/display properly due to web browser security rules.</p>
+							<h1>What is OpenVZ?</h1>
+							<p>Open Virtuozzo (OpenVZ) is an operating system level virtualization technology. Based on the Linux Kernel, OpenVZ creates isolated 'containers' or instances of a Linux Distribution.</p>
 						</div>
 					</div>
 				</div>
 				<div class="item">
 					<div class="container">
 						<div class="carousel-caption">
-							<h1>Another example headline.</h1>
-							<p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+							<h1>This Solution</h1>
+							<p>OpenVZ can be quite challenging to an untrained user. </p>
 						</div>
 					</div>
 				</div>
 				<div class="item">
 					<div class="container">
 						<div class="carousel-caption">
-							<h1>One more for good measure.</h1>
-							<ul>
-								<li>Point 1</li>
-								<li>Point 2</li>
-								<li>Point 3</li>
-							</ul>
-							<p>Then to elaborate I can give a bunch of text here for you to read and for me to discuss.</p>
+							<h1>Server Consolidation: </h1>
+							<p>An organization can decrease the number of physical servers by transitioning to a virtual environment. This leads to savings in hardware costs, space, electricity, &amp; personnel.</p>
+						</div>
+					</div>
+				</div>
+				<div class="item">
+					<div class="container">
+						<div class="carousel-caption">
+							<h1>Security: </h1>
+							<p>Each network service can be placed in its own isolated environment. If there is a security hole in one application, all the other applications will not be affected.</p>
+						</div>
+					</div>
+				</div>
+				<div class="item">
+					<div class="container">
+						<div class="carousel-caption">
+							<h1>Software Development &amp; Testing: </h1>
+							<p>Developers often build and tear down servers. With containers this can be done with ease.</p>
 						</div>
 					</div>
 				</div>
@@ -42,3 +55,6 @@
 		</div>
 		</div></div>
 		<!-- /.carousel -->
+
+		
+							

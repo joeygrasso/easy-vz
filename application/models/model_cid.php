@@ -28,6 +28,7 @@
 		
 		// changeStatus() switches the status of the cid in the database
 		// BEFORE stopped -> running AFTER
+		// Restart is always running.
 		public function changeStatus(){
 			$this->db->where('cid', $this->input->post('cid'));
 			$query = $this->db->get('containers');

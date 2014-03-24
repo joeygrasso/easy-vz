@@ -72,7 +72,7 @@ class Site extends CI_Controller {
 	
 	public function signout(){
 		$this->session->sess_destroy();
-		redirect('index.php');
+		redirect('/site/signin');
 	}
 }
 
