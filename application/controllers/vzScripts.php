@@ -48,7 +48,58 @@ class vzScripts extends CI_Controller {
 			$this->load->model('model_containers');
 			$arr['data'] = $this->model_containers->get_container_data();
 
-			if ($this->input->post('status') == "Restart"){
+			
+			switch ($this->input->post('status')) {
+				case 'Restart':
+					$arr['msg'] = '<script> alert("The container is being restarted.")</script>';
+					$this->load->helper('commands');
+                	restart($this->input->post('cid'));
+					break;
+
+				case 'Start':
+					$arr['msg'] = '<script> alert("The container is being started.")</script>';
+					$this->load->helper('commands');
+                	start($this->input->post('cid'));
+                	break;
+
+            	case 'Stopped':
+            		$arr['msg'] = '<script> alert("The container is being stopped.")</script>';
+					$this->load->helper('commands');
+                	stop($this->input->post('cid'));
+            		break;
+
+        		case 'Remove':
+        			$arr['msg'] = '<script> alert("The container is being destroyed.")</script>';
+        			$this->load->helper('commands');
+                	destroy($this->input->post('cid'));
+                	$this->model_cid->remove_container();
+        			break;
+
+    			case 'Modify':
+    				break;
+
+				default:
+					// Get container db table data to display on page.
+					$this->load->model('model_containers');
+					$arr['data'] = $this->model_containers->get_container_data();
+					if ($this->input->post('status') == "Start"){
+						$arr['msg'] = '<script> alert("The CID you provided is already running.")</script>';
+						$this->load->view('dashboard_view', $arr);
+					} else if ($this->input->post('status') == "Restart"){
+						$arr['msg'] = '<script> alert("The Container is being restarted.")</script>';
+						$this->load->view('dashboard_view', $arr);
+					} else {
+						$arr['msg'] = '<script> alert("The CID you provided is already stopped.")</script>';
+						$this->load->view('dashboard_view', $arr);
+					}
+					break;
+			}
+
+			// Load The Dashboard View With The Appropriate Message
+			$this->load->view('dashboard_view', $arr);
+
+
+		/*	if ($this->input->post('status') == "Restart"){
 				$arr['msg'] = '<script> alert("The container is being restarted.")</script>';
 				$this->load->helper('commands');
                 restart($this->input->post('cid'));
@@ -61,7 +112,7 @@ class vzScripts extends CI_Controller {
 				$this->load->helper('commands');
                 stop($this->input->post('cid'));
 			}
-
+		
 			$this->load->view('dashboard_view', $arr);
 		} else{
 			// Get container db table data to display on page.
@@ -79,6 +130,7 @@ class vzScripts extends CI_Controller {
 			}
 
 		}
+		*/
 
 	} // End validate_status()
 

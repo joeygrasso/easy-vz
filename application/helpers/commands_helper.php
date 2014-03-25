@@ -15,8 +15,4 @@
 			$cmd = "sudo vzctl restart ".$cid;
 			shell_exec($cmd);
 		}
-
-
-	}
-
 ?>

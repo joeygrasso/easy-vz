@@ -456,7 +456,7 @@
                 <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
                 <h4 class="modal-title">Remove A OpenVZ Container</h4>
             </div>
-            <?php  $this->load->helper('form'); echo form_open('vzScripts/remove_container'); ?>
+            <?php  $hidden = array('status' => 'Remove'); echo form_open('vzScripts/startStop','',$hidden);?>
             <div class="modal-body">
               <p>Please enter the CID of the appropriate container you wish to remove:</p>
               <?php echo validation_errors(); ?>

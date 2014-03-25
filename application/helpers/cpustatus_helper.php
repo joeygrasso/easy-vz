@@ -23,7 +23,7 @@
 		
 		echo '
 				<span class="text-muted"><text style="font-size: 1.75em;">
-				<div id="cpubar" style="border: 2px solid;"><span style="position:absolute; margin-left:32%; margin-top:6px">'.$inUse.'% Idle</span></div>
+				<div id="cpubar" style="border: 2px solid;"><span style="position:absolute; margin-left:32%; margin-top:6px">'.$inUse.'% Used</span></div>
 				<script>
 					$( "#cpubar" ).progressbar({
 					value: '.$inUse.'
