@@ -1,18 +1,18 @@
 <?php 
 	// This helper will allow the vzScripts to be able to execute the commands for vzctl
 
-		public function start($cid){
-			$cmd = "vzctl start ".$cid;
+		function start($cid){
+			$cmd = "sudo vzctl start ".$cid;
 			shell_exec($cmd);
 		}
 
-		public function stop($cid){
-			$cmd = "vzctl stop ".$cid;
+		function stop($cid){
+			$cmd = "sudo vzctl stop ".$cid;
 			shell_exec($cmd);
 		}
 
-		public function restart($cid){
-			$cmd = "vzctl restart ".$cid;
+		function restart($cid){
+			$cmd = "sudo vzctl restart ".$cid;
 			shell_exec($cmd);
 		}
 

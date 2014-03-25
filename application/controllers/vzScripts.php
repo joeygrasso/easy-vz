@@ -59,7 +59,7 @@ class vzScripts extends CI_Controller {
 			} else{
 				$arr['msg'] = '<script> alert("The container is being stopped.")</script>';
 				$this->load->helper('commands');
-                start($this->input->post('cid'));
+                stop($this->input->post('cid'));
 			}
 
 			$this->load->view('dashboard_view', $arr);
@@ -67,7 +67,7 @@ class vzScripts extends CI_Controller {
 			// Get container db table data to display on page.
 			$this->load->model('model_containers');
 			$arr['data'] = $this->model_containers->get_container_data();
-			if ($this->input->post('status') == "Running"){
+			if ($this->input->post('status') == "Start"){
 				$arr['msg'] = '<script> alert("The CID you provided is already running.")</script>';
 				$this->load->view('dashboard_view', $arr);
 			} else if ($this->input->post('status') == "Restart"){
