@@ -15,4 +15,10 @@
 			$cmd = "sudo vzctl restart ".$cid;
 			shell_exec($cmd);
 		}
+
+		function destroy($cid){
+			$cmd = "sudo vzctl destroy ".$cid;
+			shell_exec($cmd);
+		}
+
 ?>

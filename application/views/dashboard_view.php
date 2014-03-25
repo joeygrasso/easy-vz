@@ -277,6 +277,18 @@
           <p>Please fill out all of the following fields to create a new container:</p>
           <?php echo validation_errors(); ?>
             <div class="form-group">
+              <?php echo form_label('ContainerID', 'cid');
+              $data = array(
+                        'name'        => 'cid',
+                        'id'          => 'cid',
+                        'class'       => 'form-control',
+                        'placeholder' => 'CID',
+                        'maxlength'   => '50',
+                        'size'        => '50',
+                    );
+              echo form_input($data); ?>
+            </div>
+            <div class="form-group">
               <?php echo form_label('Hostname', 'hostname');
               $data = array(
                         'name'        => 'hostname',
@@ -295,6 +307,18 @@
                         'id'          => 'operatingsystem',
                         'class'       => 'form-control',
                         'placeholder' => 'Operating System',
+                        'maxlength'   => '50',
+                        'size'        => '50',
+                    );
+              echo form_input($data); ?>
+            </div>
+            <div class="form-group">
+              <?php echo form_label('IP Address', 'ip_address');
+              $data = array(
+                        'name'        => 'ip_address',
+                        'id'          => 'ip_address',
+                        'class'       => 'form-control',
+                        'placeholder' => 'IP Address',
                         'maxlength'   => '50',
                         'size'        => '50',
                     );

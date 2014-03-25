@@ -33,6 +33,7 @@
 			$this->db->where('cid', $this->input->post('cid'));
 			$query = $this->db->get('containers');
 			$result = $query->row();
+
 			if ( $this->input->post('status') == "Restart"){
 				$data = array('status' => 'Running');
 			} else if ($result->status == "Running"){
@@ -41,8 +42,15 @@
 				$data = array('status' => 'Running');
 			}
 			
+			// Select the proper row again and update.
+			$this->db->where('cid', $this->input->post('cid'));
 			$this->db->update('containers',$data);
-		}
+		} // End change_status()
+
+		public function remove_container(){
+			$this->db->where('cid', $this->input->post('cid'));
+			$this->db->delete('containers'); 
+		} // End remove_container()
 	}
 
 

@@ -48,35 +48,35 @@ class vzScripts extends CI_Controller {
 			$this->load->model('model_containers');
 			$arr['data'] = $this->model_containers->get_container_data();
 
-			
 			switch ($this->input->post('status')) {
 				case 'Restart':
 					$arr['msg'] = '<script> alert("The container is being restarted.")</script>';
 					$this->load->helper('commands');
-                	restart($this->input->post('cid'));
+			       	restart($this->input->post('cid'));
 					break;
 
 				case 'Start':
 					$arr['msg'] = '<script> alert("The container is being started.")</script>';
 					$this->load->helper('commands');
-                	start($this->input->post('cid'));
-                	break;
+			    	start($this->input->post('cid'));
+			    	break;
 
-            	case 'Stopped':
-            		$arr['msg'] = '<script> alert("The container is being stopped.")</script>';
+				case 'Stopped':
+					$arr['msg'] = '<script> alert("The container is being stopped.")</script>';
 					$this->load->helper('commands');
-                	stop($this->input->post('cid'));
-            		break;
+			    	stop($this->input->post('cid'));
+					break;
 
-        		case 'Remove':
-        			$arr['msg'] = '<script> alert("The container is being destroyed.")</script>';
-        			$this->load->helper('commands');
-                	destroy($this->input->post('cid'));
-                	$this->model_cid->remove_container();
-        			break;
+				case 'Remove':
+					$arr['msg'] = '<script> alert("The container is being destroyed.")</script>';
+					$this->load->helper('commands');
+			    	destroy($this->input->post('cid'));
+			    	$this->model_cid->remove_container();
+					break;
 
-    			case 'Modify':
-    				break;
+				case 'Modify':
+					//Blah Blah
+					break;
 
 				default:
 					// Get container db table data to display on page.
@@ -88,31 +88,20 @@ class vzScripts extends CI_Controller {
 					} else if ($this->input->post('status') == "Restart"){
 						$arr['msg'] = '<script> alert("The Container is being restarted.")</script>';
 						$this->load->view('dashboard_view', $arr);
+					} else if ($this->input->post('status') == "Remove"){
+						$arr['msg'] = '<script> alert("The Container cannot be removed.")</script>';
+						$this->load->view('dashboard_view', $arr);
 					} else {
 						$arr['msg'] = '<script> alert("The CID you provided is already stopped.")</script>';
 						$this->load->view('dashboard_view', $arr);
 					}
 					break;
-			}
+			} // End Switch Statement
 
 			// Load The Dashboard View With The Appropriate Message
-			$this->load->view('dashboard_view', $arr);
-
-
-		/*	if ($this->input->post('status') == "Restart"){
-				$arr['msg'] = '<script> alert("The container is being restarted.")</script>';
-				$this->load->helper('commands');
-                restart($this->input->post('cid'));
-			} else if ($this->input->post('status') == "Start"){
-				$arr['msg'] = '<script> alert("The container is being started.")</script>';
-				$this->load->helper('commands');
-                start($this->input->post('cid'));
-			} else{
-				$arr['msg'] = '<script> alert("The container is being stopped.")</script>';
-				$this->load->helper('commands');
-                stop($this->input->post('cid'));
-			}
-		
+			// Get container db table data to display on page.
+			$this->load->model('model_containers');
+			$arr['data'] = $this->model_containers->get_container_data();
 			$this->load->view('dashboard_view', $arr);
 		} else{
 			// Get container db table data to display on page.
@@ -130,7 +119,6 @@ class vzScripts extends CI_Controller {
 			}
 
 		}
-		*/
 
 	} // End validate_status()
 
@@ -143,25 +131,16 @@ class vzScripts extends CI_Controller {
 			$this->load->view('dashboard_view', $arr);
 	} // End create_container()
 
-		public function modify_container(){
+	public function modify_container(){
 		// Get container db table data to display on page.
-			$this->load->model('model_containers');
-			$arr['data'] = $this->model_containers->get_container_data();
+		$this->load->model('model_containers');
+		$arr['data'] = $this->model_containers->get_container_data();
 
-			$arr['msg'] = '<script> alert("The container has been modified. Please wait 5 minutes before using it.")</script>';
-			$this->load->view('dashboard_view', $arr);
+		$arr['msg'] = '<script> alert("The container has been modified. Please wait 5 minutes before using it.")</script>';
+		$this->load->view('dashboard_view', $arr);
 	} // End create_container()
 
-	public function remove_container(){
-		// Get container db table data to display on page.
-			$this->load->model('model_containers');
-			$arr['data'] = $this->model_containers->get_container_data();
-
-			$arr['msg'] = '<script> alert("The container has been removed.")</script>';
-			$this->load->view('dashboard_view', $arr);
-	} // End create_container()
-
-}
+} // End Class
 
 /* End of file vzScripts.php */
 /* Location: ./application/controllers/vzScripts.php */
