@@ -1,3 +1,50 @@
+    <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="<?php echo base_url(); ?>images/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="<?php echo base_url(); ?>images/favicon.ico" type="image/x-icon">
+
+    <!-- Bootstrap core CSS -->
+    <link href="<?php echo base_url(); ?>includes/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Load main css file -->
+    <link href="<?php echo base_url(); ?>includes/css/main.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    
+    <title>Powering the Cloud</title>
+  </head>
+
+  <body>
+    
+    <!-- Navigation -->
+    <header class="navbar navbar-static-top bs-docs-nav" id="top" role="banner">
+      <div class="container">
+        <div class="navbar-header">
+          <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+        </div>
+        <nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="<?php echo base_url(); ?>index.php/site/index">Home</a></li>
+            <li><a href="<?php echo base_url(); ?>index.php/site/signin">Sign In</a></li>
+            <li class="active"><a href="<?php echo base_url(); ?>index.php/site/about">About</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
     <!-- About Hero -->
     <div class="bs-docs-header" id="content">
       <div class="container">

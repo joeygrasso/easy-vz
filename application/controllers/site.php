@@ -12,9 +12,7 @@ class Site extends CI_Controller {
 	
 	// About Page View
 	public function about() {
-		$this->load->view('site_header');
 		$this->load->view('about2_view');
-		$this->load->view('site_footer');
 	}
 	
 	// Sign In Page View
