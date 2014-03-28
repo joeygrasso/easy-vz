@@ -6,7 +6,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <link rel="shortcut icon" href="<?php echo base_url(); ?>images/favicon.ico" type="image/x-icon">
-	<link rel="icon" href="<?php echo base_url(); ?>images/favicon.ico" type="image/x-icon">
+	  <link rel="icon" href="<?php echo base_url(); ?>images/favicon.ico" type="image/x-icon">
 
     <!-- Bootstrap core CSS -->
     <link href="<?php echo base_url(); ?>includes/css/bootstrap.min.css" rel="stylesheet">
@@ -33,7 +33,7 @@
               <ul class="nav masthead-nav">
                 <li <?php if (basename($_SERVER['REQUEST_URI'])== "index" ){ echo "class=\"active\"";} ?>><a href="<?php echo base_url(); ?>index.php/site/index">Home</a></li>
                 <li <?php if (basename($_SERVER['REQUEST_URI'])== "signin"){ echo "class=\"active\"";} ?>><a href="<?php echo base_url(); ?>index.php/site/signin">Sign In</a></li>
-				<li <?php if (basename($_SERVER['REQUEST_URI'])== "about"){ echo "class=\"active\"";} ?>><a href="<?php echo base_url(); ?>index.php/site/about">About</a></li>
+				        <li <?php if (basename($_SERVER['REQUEST_URI'])== "about"){ echo "class=\"active\"";} ?>><a href="<?php echo base_url(); ?>index.php/site/about">About</a></li>
               </ul>
             </div>
           </div>

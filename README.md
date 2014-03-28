@@ -1,7 +1,10 @@
 virtualization
 ==============
 
-Honors Project &amp; Techfest 2014 Project
+Techfest 2014 Project
 
 
-Demo Upload
+README Drastically needs to be updated
+
+Production Version Can be found at:
+http://vz.joeygrasso.com
