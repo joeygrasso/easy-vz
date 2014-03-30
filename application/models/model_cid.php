@@ -47,10 +47,42 @@
 			$this->db->update('containers',$data);
 		} // End change_status()
 
+		// Removes a container form the database based on the cid provided
 		public function remove_container(){
 			$this->db->where('cid', $this->input->post('cid'));
 			$this->db->delete('containers'); 
 		} // End remove_container()
+
+		// Creates a new row in the database after the create form is submitted
+		public function create_container(){
+			// Get Elements
+			$cid = $this->input->post('cid');
+			$hostname = $this->input->post('hostname');
+			$operating_system = $this->input->post('operatingsystem');
+			$ip_address = $this->input->post('ip_address');
+			$ram = $this->input->post('ram');
+			$hard_drive = $this->input->post('harddrive');
+
+			// Put the elements in an array
+			$data = array(
+               'cid' 				=> $cid,
+               'hostname' 			=> $hostname,
+               'operating_system' 	=> $operating_system,
+               'ip_address'			=> $ip_address,
+               'ram'				=> $ram,
+               'hard_drive'			=> $hard_drive,
+               'status'				=> 'Stopped'
+            );
+
+			// Insert the values into the database
+			$this->db->insert('containers', $data); 
+		
+		} // End create_container()
+
+		// Modifies a row in the database after the modify form is submitted
+		public function modify_container(){
+
+		}
 	}
 
 

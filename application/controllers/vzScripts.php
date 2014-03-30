@@ -124,11 +124,18 @@ class vzScripts extends CI_Controller {
 
 	public function create_container(){
 		// Get container db table data to display on page.
-			$this->load->model('model_containers');
-			$arr['data'] = $this->model_containers->get_container_data();
+		$this->load->model('model_containers');
+		$arr['data'] = $this->model_containers->get_container_data();
 
-			$arr['msg'] = '<script> alert("The container is being created. Please wait 5 minutes before using it.")</script>';
-			$this->load->view('dashboard_view', $arr);
+		// Send Form Data to Creation Script
+		$this->load->helper('commands');
+		create($this->input->post('cid'),$this->input->post('hostname'),$this->input->post('password'),$this->input->post('ip_address'),$this->input->post('ram'),$this->input->post('harddrive'));
+
+		// Send Form Data to Database Script
+		
+
+		$arr['msg'] = '<script> alert("The container is being created. Please wait 5 minutes before using it.")</script>';
+		$this->load->view('dashboard_view', $arr);
 	} // End create_container()
 
 	public function modify_container(){

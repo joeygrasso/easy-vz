@@ -19,8 +19,8 @@
     
     <!-- Progress Bar Stuff -->
     <link rel="stylesheet" href="<?php echo base_url(); ?>includes/css/progressBar.css">
-  <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
-  <script src="http://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+    <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="http://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
 
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -272,7 +272,7 @@
                 <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
                 <h4 class="modal-title">Create A OpenVZ Container</h4>
               </div>
-            <?php  $this->load->helper('form'); $hidden = array('status' => 'Stopped');echo form_open('vzScripts/create_container','',$hidden); ?>
+            <?php  $this->load->helper('form'); $hidden = array('status' => 'Create');echo form_open('vzScripts/create_container','',$hidden); ?>
         <div class="modal-body">
           <p>Please fill out all of the following fields to create a new container:</p>
           <?php echo validation_errors(); ?>
@@ -295,6 +295,18 @@
                         'id'          => 'hostname',
                         'class'       => 'form-control',
                         'placeholder' => 'Hostname',
+                        'maxlength'   => '50',
+                        'size'        => '50',
+                    );
+              echo form_input($data); ?>
+            </div>
+            <div class="form-group">
+              <?php echo form_label('Root Password', 'password');
+              $data = array(
+                        'name'        => 'password',
+                        'id'          => 'password',
+                        'class'       => 'form-control',
+                        'placeholder' => 'Root Password',
                         'maxlength'   => '50',
                         'size'        => '50',
                     );
@@ -410,6 +422,18 @@
                   );
             echo form_input($data); ?>
           </div>
+          <div class="form-group">
+              <?php echo form_label('Root Password', 'password');
+              $data = array(
+                        'name'        => 'password',
+                        'id'          => 'password',
+                        'class'       => 'form-control',
+                        'placeholder' => 'Root Password',
+                        'maxlength'   => '50',
+                        'size'        => '50',
+                    );
+              echo form_input($data); ?>
+            </div>
           <div class="form-group">
             <?php echo form_label('Operating System', 'operatingsystem');
             $data = array(
