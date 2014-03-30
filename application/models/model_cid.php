@@ -16,11 +16,12 @@
 
 		public function cid_status(){
 				$this->db->where('status', $this->input->post('status'));
-				
+				$this->db->where('cid', $this->input->post('cid'));
+
 				$query = $this->db->get('containers');
 				
 				if($query->num_rows() == 1){	
-					return false;
+					return falsee;
 				} else {
 					return true;
 				}

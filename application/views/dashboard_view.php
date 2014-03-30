@@ -100,8 +100,8 @@
                           <td>'.$row->hostname.'</td>
                           <td>'.$row->operating_system.'</td>
                           <td>'.$row->ip_address.'</td>
-                          <td>'.$row->ram.'</td>
-                          <td>'.$row->hard_drive.'</td>
+                          <td>'.$row->ram.'MB</td>
+                          <td>'.$row->hard_drive.'GB</td>
                           <td>'.$row->status.'</td>
                         </tr>
                       ';

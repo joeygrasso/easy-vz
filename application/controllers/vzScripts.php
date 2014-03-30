@@ -91,8 +91,11 @@ class vzScripts extends CI_Controller {
 					} else if ($this->input->post('status') == "Remove"){
 						$arr['msg'] = '<script> alert("The Container cannot be removed.")</script>';
 						$this->load->view('dashboard_view', $arr);
-					} else {
+					} else if ($this->input->post('status') == "Stopped"){
 						$arr['msg'] = '<script> alert("The CID you provided is already stopped.")</script>';
+						$this->load->view('dashboard_view', $arr);
+					} else{
+						$arr['msg'] = '<script> alert("What have you done?")</script>';
 						$this->load->view('dashboard_view', $arr);
 					}
 					break;
@@ -113,8 +116,11 @@ class vzScripts extends CI_Controller {
 			} else if ($this->input->post('status') == "Restart"){
 				$arr['msg'] = '<script> alert("The Container is being restarted.")</script>';
 				$this->load->view('dashboard_view', $arr);
-			} else {
+			} else if ($this->input->post('status') == "Stopped"){
 				$arr['msg'] = '<script> alert("The CID you provided is already stopped.")</script>';
+				$this->load->view('dashboard_view', $arr);
+			} else{
+				$arr['msg'] = '<script> alert("What have you done?")</script>';
 				$this->load->view('dashboard_view', $arr);
 			}
 
@@ -123,17 +129,17 @@ class vzScripts extends CI_Controller {
 	} // End validate_status()
 
 	public function create_container(){
-		// Get container db table data to display on page.
-		$this->load->model('model_containers');
-		$arr['data'] = $this->model_containers->get_container_data();
-
 		// Send Form Data to Creation Script
 		$this->load->helper('commands');
 		create($this->input->post('cid'),$this->input->post('hostname'),$this->input->post('password'),$this->input->post('ip_address'),$this->input->post('ram'),$this->input->post('harddrive'));
 
 		// Send Form Data to Database Script
+		$this->load->model('model_cid');
+		$this->model_cid->create_container();
 		
-
+		// Get container db table data to display on page.
+		$this->load->model('model_containers');
+		$arr['data'] = $this->model_containers->get_container_data();
 		$arr['msg'] = '<script> alert("The container is being created. Please wait 5 minutes before using it.")</script>';
 		$this->load->view('dashboard_view', $arr);
 	} // End create_container()
