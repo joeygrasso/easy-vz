@@ -122,7 +122,7 @@
                 <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
                 <h4 class="modal-title">Start A OpenVZ Container</h4>
               </div>
-            <?php  $this->load->helper('form'); $hidden = array('status' => 'Start');echo form_open('vzScripts/startStop','',$hidden); ?>
+            <?php  $this->load->helper('form'); $hidden = array('status' => 'Running');echo form_open('vzScripts/startStop','',$hidden); ?>
         <div class="modal-body">
                   <p>Please enter the CID of the appropriate container you wish to start:</p>
                   <?php echo validation_errors(); ?>

@@ -21,7 +21,7 @@
 				$query = $this->db->get('containers');
 				
 				if($query->num_rows() == 1){	
-					return falsee;
+					return false;
 				} else {
 					return true;
 				}
