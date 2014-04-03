@@ -11,7 +11,7 @@
     <!-- Bootstrap core CSS -->
     <link href="<?php echo base_url(); ?>includes/css/bootstrap.min.css" rel="stylesheet">
     <!-- Load main css file -->
-    <link href="<?php echo base_url(); ?>includes/css/main.css" rel="stylesheet">
+    <link href="<?php echo base_url(); ?>includes/css/docs.min.css" rel="stylesheet">
 
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -122,147 +122,51 @@
             
             <h3 id="examples-dashboard">Dashboard</h3>
             <div class="row bs-examples">
-              <div class="col-xs-6 col-md-4">
-                <a class="thumbnail" href="../examples/starter-template/"><img src="../examples/screenshots/starter-template.jpg" alt=""></a>
-                <h4>Starter template</h4>
-                <p>Nothing but the basics: compiled CSS and JavaScript along with a container.</p>
-              </div>
-              <div class="col-xs-6 col-md-4">
-                <a class="thumbnail" href="../examples/theme/"><img src="../examples/screenshots/theme.jpg" alt=""></a>
-                <h4>Bootstrap theme</h4>
-                <p>Load the optional Bootstrap theme for a visually enhanced experience.</p>
-              </div>
-              <div class="clearfix visible-xs"></div>
-              <div class="col-xs-6 col-md-4">
-                <a class="thumbnail" href="../examples/grid/"><img src="../examples/screenshots/grid.jpg" alt=""></a>
-                <h4>Grids</h4>
-                <p>Multiple examples of grid layouts with all four tiers, nesting, and more.</p>
-              </div>
-              <div class="col-xs-6 col-md-4">
-                <a class="thumbnail" href="../examples/jumbotron/"><img src="../examples/screenshots/jumbotron.jpg" alt=""></a>
-                <h4>Jumbotron</h4>
-                <p>Build around the jumbotron with a navbar and some basic grid columns.</p>
-              </div>
-              <div class="clearfix visible-xs"></div>
-              <div class="col-xs-6 col-md-4">
-                <a class="thumbnail" href="../examples/jumbotron-narrow/"><img src="../examples/screenshots/jumbotron-narrow.jpg" alt=""></a>
-                <h4>Narrow jumbotron</h4>
-                <p>Build a more custom page by narrowing the default container and jumbotron.</p>
+              <div class="col-md-12">
+                <img src="<?php echo base_url(); ?>images/dashboard.png" class="img-responsive" alt="dashboard" />
               </div>
             </div>
 
             <h3 id="examples-start">Start</h3>
             <div class="row bs-examples">
-              <div class="col-xs-6 col-md-4">
-                <a class="thumbnail" href="../examples/navbar/"><img src="../examples/screenshots/navbar.jpg" alt=""></a>
-                <h4>Navbar</h4>
-                <p>Super basic template that includes the navbar along with some additional content.</p>
-              </div>
-              <div class="col-xs-6 col-md-4">
-                <a class="thumbnail" href="../examples/navbar-static-top/"><img src="../examples/screenshots/navbar-static.jpg" alt=""></a>
-                <h4>Static top navbar</h4>
-                <p>Super basic template with a static top navbar along with some additional content.</p>
-              </div>
-              <div class="clearfix visible-xs"></div>
-              <div class="col-xs-6 col-md-4">
-                <a class="thumbnail" href="../examples/navbar-fixed-top/"><img src="../examples/screenshots/navbar-fixed.jpg" alt=""></a>
-                <h4>Fixed navbar</h4>
-                <p>Super basic template with a fixed top navbar along with some additional content.</p>
+              <div class="col-md-12">
+                <img src="<?php echo base_url(); ?>images/start.png" class="img-responsive" alt="start" />
               </div>
             </div>
             
             <h3 id="examples-stop">Stop</h3>
             <div class="row bs-examples">
-              <div class="col-xs-6 col-md-4">
-                <a class="thumbnail" href="../examples/navbar/"><img src="../examples/screenshots/navbar.jpg" alt=""></a>
-                <h4>Navbar</h4>
-                <p>Super basic template that includes the navbar along with some additional content.</p>
-              </div>
-              <div class="col-xs-6 col-md-4">
-                <a class="thumbnail" href="../examples/navbar-static-top/"><img src="../examples/screenshots/navbar-static.jpg" alt=""></a>
-                <h4>Static top navbar</h4>
-                <p>Super basic template with a static top navbar along with some additional content.</p>
-              </div>
-              <div class="clearfix visible-xs"></div>
-              <div class="col-xs-6 col-md-4">
-                <a class="thumbnail" href="../examples/navbar-fixed-top/"><img src="../examples/screenshots/navbar-fixed.jpg" alt=""></a>
-                <h4>Fixed navbar</h4>
-                <p>Super basic template with a fixed top navbar along with some additional content.</p>
+              <div class="col-md-12">
+                <img src="<?php echo base_url(); ?>images/stop.png" class="img-responsive" alt="stop" />
               </div>
             </div>
 
             <h3 id="examples-restart">Restart</h3>
             <div class="row bs-examples">
-              <div class="col-xs-6 col-md-4">
-                <a class="thumbnail" href="../examples/navbar/"><img src="../examples/screenshots/navbar.jpg" alt=""></a>
-                <h4>Navbar</h4>
-                <p>Super basic template that includes the navbar along with some additional content.</p>
-              </div>
-              <div class="col-xs-6 col-md-4">
-                <a class="thumbnail" href="../examples/navbar-static-top/"><img src="../examples/screenshots/navbar-static.jpg" alt=""></a>
-                <h4>Static top navbar</h4>
-                <p>Super basic template with a static top navbar along with some additional content.</p>
-              </div>
-              <div class="clearfix visible-xs"></div>
-              <div class="col-xs-6 col-md-4">
-                <a class="thumbnail" href="../examples/navbar-fixed-top/"><img src="../examples/screenshots/navbar-fixed.jpg" alt=""></a>
-                <h4>Fixed navbar</h4>
-                <p>Super basic template with a fixed top navbar along with some additional content.</p>
+              <div class="col-md-12">
+                <img src="<?php echo base_url(); ?>images/restart.png" class="img-responsive" alt="restart" />
               </div>
             </div>
+            
             <h3 id="examples-create">Create</h3>
             <div class="row bs-examples">
-              <div class="col-xs-6 col-md-4">
-                <a class="thumbnail" href="../examples/navbar/"><img src="../examples/screenshots/navbar.jpg" alt=""></a>
-                <h4>Navbar</h4>
-                <p>Super basic template that includes the navbar along with some additional content.</p>
-              </div>
-              <div class="col-xs-6 col-md-4">
-                <a class="thumbnail" href="../examples/navbar-static-top/"><img src="../examples/screenshots/navbar-static.jpg" alt=""></a>
-                <h4>Static top navbar</h4>
-                <p>Super basic template with a static top navbar along with some additional content.</p>
-              </div>
-              <div class="clearfix visible-xs"></div>
-              <div class="col-xs-6 col-md-4">
-                <a class="thumbnail" href="../examples/navbar-fixed-top/"><img src="../examples/screenshots/navbar-fixed.jpg" alt=""></a>
-                <h4>Fixed navbar</h4>
-                <p>Super basic template with a fixed top navbar along with some additional content.</p>
+              <div class="col-md-12">
+                <img src="<?php echo base_url(); ?>images/create.png" class="img-responsive" alt="create" />
               </div>
             </div>
 
             <h3 id="examples-modify">Modify</h3>
             <div class="row bs-examples">
-              <div class="col-xs-6 col-md-4">
-                <a class="thumbnail" href="../examples/navbar/"><img src="../examples/screenshots/navbar.jpg" alt=""></a>
-                <h4>Navbar</h4>
-                <p>Super basic template that includes the navbar along with some additional content.</p>
-              </div>
-              <div class="col-xs-6 col-md-4">
-                <a class="thumbnail" href="../examples/navbar-static-top/"><img src="../examples/screenshots/navbar-static.jpg" alt=""></a>
-                <h4>Static top navbar</h4>
-                <p>Super basic template with a static top navbar along with some additional content.</p>
-              </div>
-              <div class="clearfix visible-xs"></div>
-              <div class="col-xs-6 col-md-4">
-                <a class="thumbnail" href="../examples/navbar-fixed-top/"><img src="../examples/screenshots/navbar-fixed.jpg" alt=""></a>
-                <h4>Fixed navbar</h4>
-                <p>Super basic template with a fixed top navbar along with some additional content.</p>
+              <div class="col-md-12">
+                <img src="<?php echo base_url(); ?>images/modify.png" class="img-responsive" alt="modify" />
               </div>
             </div>
 
-            <h3 id="examples-destroy">Destroy</h3>
+            <h3 id="examples-remove">Remove</h3>
             <div class="row bs-examples">
-              <div class="col-xs-6 col-md-4">
-                <a class="thumbnail" href="../examples/cover/"><img src="../examples/screenshots/cover.jpg" alt=""></a>
-                <h4>Cover</h4>
-                <p>A one-page template for building simple and beautiful home pages.</p>
+              <div class="col-md-12">
+                <img src="<?php echo base_url(); ?>images/remove.png" class="img-responsive" alt="remove" />
               </div>
-              <div class="col-xs-6 col-md-4">
-                <a class="thumbnail" href="../examples/carousel/"><img src="../examples/screenshots/carousel.jpg" alt=""></a>
-                <h4>Carousel</h4>
-                <p>Customize the navbar and carousel, then add some new components.</p>
-              </div>
-              <div class="clearfix visible-xs"></div>
             </div>
           </div>
 
@@ -281,7 +185,7 @@
                   <li><a href="#examples-restart">Restart</a></li>
                   <li><a href="#examples-create">Create</a></li>
                   <li><a href="#examples-modify">Modify</a></li>
-                  <li><a href="#examples-destroy">Destroy</a></li>
+                  <li><a href="#examples-remove">Remove</a></li>
                 </ul>
               </li>
             </ul>
@@ -300,7 +204,7 @@
 
     <!-- Bootstrap core JavaScript -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-    <script src="./bootstrap.min.js"></script>
-    <script src="./docs.min.js"></script>
+    <script src="<?php echo base_url(); ?>includes/js/bootstrap.min.js"></script>
+    <script src="<?php echo base_url(); ?>includes/js/docs.min.js"></script>
   </body>
 </html>

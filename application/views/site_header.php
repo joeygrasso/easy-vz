@@ -19,7 +19,7 @@
       <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
     
-    <title>Powering the Cloud</title>
+    <title>Powering OpenVZ</title>
   </head>
 
   <body>
