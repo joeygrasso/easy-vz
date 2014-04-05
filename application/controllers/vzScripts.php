@@ -149,10 +149,14 @@ class vzScripts extends CI_Controller {
 			// code
 
 		// Send Form Data to Database Update Script
-			// Construct Array To send
+		$changes = array(
+			"hostname"		=> $this->input->post('hostname'),
+			"ram"			=> $this->input->post('ram'),
+			"hard_drive"	=> $this->input->post('harddrive')
+			);
 		
 		$this->load->model('model_cid');
-		$this->model_cid->modify_container($data);
+		$this->model_cid->modify_container($changes);
 
 		// Get container db table data to display on page.
 		$this->load->model('model_containers');

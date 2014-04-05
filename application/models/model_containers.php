@@ -8,6 +8,10 @@
 			return $this->db->query("SELECT * FROM containers");
 		} // End get_container_data()
 
+		// Retrieve a specific container row
+		public function get_cid_data($cid){
+			return $this->db->get_where('containers', $cid);
+		} // End get_cid_data
 
 	} // End Class
 
