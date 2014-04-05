@@ -435,18 +435,6 @@
               echo form_input($data); ?>
             </div>
           <div class="form-group">
-            <?php echo form_label('Operating System', 'operatingsystem');
-            $data = array(
-                      'name'        => 'operatingsystem',
-                      'id'          => 'operatingsystem',
-                      'class'       => 'form-control',
-                      'placeholder' => 'Operating System',
-                      'maxlength'   => '50',
-                      'size'        => '50',
-                  );
-            echo form_input($data); ?>
-            </div>
-          <div class="form-group">
             <?php echo form_label('RAM', 'ram');
             $data = array(
                       'name'        => 'ram',

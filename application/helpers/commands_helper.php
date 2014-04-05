@@ -35,4 +35,8 @@
 			$cmd = "sudo vzctl set ".$cid." --userpasswd root:".$password." --vmguarpages ".$ram."M --oomguarpages ".$ram."M --diskspace ".$diskspace."G:".$diskspace."G --save";
 			shell_exec($cmd);
 		}
+
+		function update(){
+			// Code bitch
+		}
 ?>

@@ -55,7 +55,7 @@ class vzScripts extends CI_Controller {
 			       	restart($this->input->post('cid'));
 					break;
 
-				case 'Start':
+				case 'Running':
 					$arr['msg'] = '<script> alert("The container is being started.")</script>';
 					$this->load->helper('commands');
 			    	start($this->input->post('cid'));
@@ -82,7 +82,7 @@ class vzScripts extends CI_Controller {
 					// Get container db table data to display on page.
 					$this->load->model('model_containers');
 					$arr['data'] = $this->model_containers->get_container_data();
-					if ($this->input->post('status') == "Start"){
+					if ($this->input->post('status') == "Running"){
 						$arr['msg'] = '<script> alert("The CID you provided is already running.")</script>';
 						$this->load->view('dashboard_view', $arr);
 					} else if ($this->input->post('status') == "Restart"){
@@ -110,7 +110,7 @@ class vzScripts extends CI_Controller {
 			// Get container db table data to display on page.
 			$this->load->model('model_containers');
 			$arr['data'] = $this->model_containers->get_container_data();
-			if ($this->input->post('status') == "Start"){
+			if ($this->input->post('status') == "Running"){
 				$arr['msg'] = '<script> alert("The CID you provided is already running.")</script>';
 				$this->load->view('dashboard_view', $arr);
 			} else if ($this->input->post('status') == "Restart"){
@@ -145,10 +145,18 @@ class vzScripts extends CI_Controller {
 	} // End create_container()
 
 	public function modify_container(){
+		// Send Form Data to Creation Script
+			// code
+
+		// Send Form Data to Database Update Script
+			// Construct Array To send
+		
+		$this->load->model('model_cid');
+		$this->model_cid->modify_container($data);
+
 		// Get container db table data to display on page.
 		$this->load->model('model_containers');
 		$arr['data'] = $this->model_containers->get_container_data();
-
 		$arr['msg'] = '<script> alert("The container has been modified. Please wait 5 minutes before using it.")</script>';
 		$this->load->view('dashboard_view', $arr);
 	} // End create_container()
