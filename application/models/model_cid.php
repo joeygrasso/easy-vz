@@ -82,6 +82,7 @@
 
 		// Modifies a row in the database after the modify form is submitted
 		public function modify_container($data){
+			
 			$this->db->where('cid', $this->input->post('cid'));
 			$this->db->update('containers', $data);
 		}
